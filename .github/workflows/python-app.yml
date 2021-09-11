@@ -17,7 +17,7 @@ jobs:
            sudo apt install -y python3.9 python3.9-distutils git rsync
     - name: pyarmor
       run: sudo /usr/bin/python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor 
-           sudo /usr/bin/python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
+           
     - name: remotepull
       run: |
         mkdir /tmp/obf_code && cd /tmp/obf_code && git clone https://venugopalnaiduch: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@github.com/neta-cybercns/cybercnsbackend_encrypted.git
