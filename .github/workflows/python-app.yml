@@ -13,10 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: dependencies
-      run: sudo apt update 
+      run: sudo apt update /usr/bin/
+           sudo apt install -y python3.9 python3.9-distutils git rsync
     - name: pyarmor
-      run: sudo python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
-           sudo python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
+      run: sudo /usr/bin/python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
+           sudo /usr/bin/python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
     - name: remotepull
       run: |
         mkdir /tmp/obf_code && cd /tmp/obf_code && git clone https://venugopalnaiduch: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@github.com/neta-cybercns/cybercnsbackend_encrypted.git
