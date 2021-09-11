@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: dependencies
-      run: sudo apt update && DEBIAN_FRONTEND=noninteractive apt install -y python3.9 python3.9-distutils git rsync
+      run: sudo apt update 
     - name: pyarmor
       run: sudo python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
            sudo python3.9 $CI_PROJECT_DIR/Code_Obfuscation/get-pip.py && python3 -m pip install pyarmor
